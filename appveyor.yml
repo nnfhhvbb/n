@@ -1,0 +1,25 @@
+version: 3.00.00.{build}
+
+os: Visual Studio 2015
+
+branches:
+  except:
+    - configdata
+    - gh-pages
+
+environment:
+  matrix:
+  - IdeVersion: VS2015
+  #- IdeVersion: Mono
+  SKIP_PAUSE: TRUE
+  ARCHIVE_WITH_PDB: TRUE
+
+build: off
+
+build_script:
+- ps: |
+    Write-Host "Not building"
+
+test_script:
+- ps: |
+    Write-Host "Not testing"
