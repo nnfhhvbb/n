@@ -1,0 +1,19 @@
+{
+  "profiles": {
+    "GitExtensions": {
+      "commandName": "Project",
+      "commandLineArgs": "browse \"$(MSBuildThisFileDirectory)..\""
+    },
+    "Dashboard": {
+      "commandName": "Project"
+    },
+    "Blame": {
+      "commandName": "Project",
+      "commandLineArgs": "blame GitExtensions.settings"
+    },
+    "FileHistory": {
+      "commandName": "Project",
+      "commandLineArgs": "filehistory GitExtensions.settings"
+    }
+  }
+}
