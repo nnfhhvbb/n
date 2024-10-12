@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft-WindowsAPICodePack-Core" Version="$(MicrosoftWindowsAPICodePackVersion)" />
+    <PackageReference Include="Newtonsoft.Json" Version="$(NewtonsoftJsonVersion)" />
+    <PackageReference Include="System.Reactive.Linq" Version="$(SystemReactiveVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\GitCommands\GitCommands.csproj" />
+    <ProjectReference Include="..\..\..\GitExtUtils\GitExtUtils.csproj" />
+    <ProjectReference Include="..\..\..\ResourceManager\ResourceManager.csproj" />
+    <ProjectReference Include="..\..\GitUIPluginInterfaces\GitUIPluginInterfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PluginAssembly Include="$([System.IO.Path]::Combine('$(TargetDir)', 'Newtonsoft.Json.dll'))" />
+  </ItemGroup>
+
+</Project>
