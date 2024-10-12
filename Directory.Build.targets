@@ -1,0 +1,12 @@
+<Project>
+  <Import Project=".\scripts\sdk\Sdk.targets" />
+
+  <ItemGroup Condition="'$(EnableStyleCopAnalyzers)' != 'false'">
+    <PackageReference Include="StyleCop.Analyzers" Version="$(StyleCopAnalyzersVersion)" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(EnableVisualStudioThreading)' != 'false'">
+    <PackageReference Include="Microsoft.VisualStudio.Threading" Version="$(MicrosoftVisualStudioThreadingVersion)" />
+  </ItemGroup>
+
+</Project>

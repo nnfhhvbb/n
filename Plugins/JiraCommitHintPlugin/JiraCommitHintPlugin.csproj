@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="Atlassian.SDK" Version="12.1.1" />
+    <PackageReference Include="NString" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\GitExtUtils\GitExtUtils.csproj" />
+    <ProjectReference Include="..\..\ResourceManager\ResourceManager.csproj" />
+    <ProjectReference Include="..\GitUIPluginInterfaces\GitUIPluginInterfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Resources\IconJira.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PluginAssembly Include="$([System.IO.Path]::Combine('$(TargetDir)', 'Atlassian.Jira.dll'))" />
+    <PluginAssembly Include="$([System.IO.Path]::Combine('$(TargetDir)', 'NString.dll'))" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Resources -->
+    <EmbeddedResource Update="Properties\Resources.resx" Generator="ResXFileCodeGenerator" LastGenOutput="Resources.Designer.cs" />
+  </ItemGroup>
+
+</Project>
