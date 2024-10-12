@@ -1,0 +1,6 @@
+language: csharp
+solution: GitExtensionsMono.sln
+os: linux
+
+install:
+  - nuget restore GitExtensionsMono.sln
